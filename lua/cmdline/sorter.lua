@@ -25,7 +25,7 @@ return function(opts)
 
       -- Prioritise commands over history
       if entry.type == "command" then
-        return 1 / ((fzy_score + OFFSET) * 1.15)
+        return 1 / ((fzy_score + OFFSET) * 5.15)
       end
 
       -- Poor non-empty matches can also have negative values. Offset the score
