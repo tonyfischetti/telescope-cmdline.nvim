@@ -44,8 +44,9 @@ C.autocomplete = function(text)
     return { { type = 'number', index = 1, cmd = text, desc = 'Go to line ' .. text } }
   end
 
-  local history = state.command_history()
-  if #text == 0 then return history end
+  -- local history = state.command_history()
+  -- if #text == 0 then return history end
+  local history = {}
 
   -- System commands
   if string.sub(text, 1, 1) == '!' then
